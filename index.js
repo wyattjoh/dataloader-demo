@@ -1,4 +1,5 @@
 const { ApolloServer, gql } = require("apollo-server");
+const DataLoader = require("dataloader");
 
 const db = require("./db");
 
@@ -45,10 +46,20 @@ const server = new ApolloServer({
   context: () => {
     const loaders = db();
 
+    const stories = new DataLoader(loaders.stories);
+    const users = new DataLoader(loaders.users);
+    const storyComments = new DataLoader(loaders.storiesComments);
+    const commentReplies = new DataLoader(loaders.commentsReplies);
+
     console.log("\nstarting request");
 
     return {
-      loaders
+      loaders: {
+        story: url => stories.load(url),
+        user: id => users.load(id),
+        storyComments: storyID => storyComments.load(storyID),
+        commentReplies: parentID => commentReplies.load(parentID)
+      }
     };
   }
 });

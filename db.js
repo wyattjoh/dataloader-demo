@@ -43,7 +43,7 @@ module.exports = () => {
      */
     storiesComments: query(storyIDs => {
       const comments = db.comments.filter(
-        comment => comment.storyID === storyID && !comment.parentID
+        comment => storyIDs.includes(comment.storyID) && !comment.parentID
       );
       return storyIDs.map(storyID =>
         comments.filter(comment => comment.storyID === storyID)
@@ -59,8 +59,8 @@ module.exports = () => {
      * find replies for many comments.
      */
     commentsReplies: query(parentIDs => {
-      const comments = db.comments.filter(
-        comment => comment.parentID === parentID
+      const comments = db.comments.filter(comment =>
+        parentIDs.includes(comment.parentID)
       );
       return parentIDs.map(parentID =>
         comments.filter(comment => comment.parentID === parentID)

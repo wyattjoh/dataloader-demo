@@ -43,8 +43,12 @@ const server = new ApolloServer({
   typeDefs,
   resolvers,
   context: () => {
+    const loaders = db();
+
+    console.log("\nstarting request");
+
     return {
-      loaders: db()
+      loaders
     };
   }
 });

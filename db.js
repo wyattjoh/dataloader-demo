@@ -2,7 +2,7 @@ const db = require("./db.json");
 
 module.exports = () => {
   let queries = 1;
-  const query = fn => args => {
+  const query = fn => async args => {
     console.log(`query: ${queries++}`);
     return fn(args);
   };

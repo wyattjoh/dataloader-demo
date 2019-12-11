@@ -1,0 +1,15 @@
+{
+  "name": "dataloader-demo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Wyatt Johnson <wyattjoh@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "apollo-server": "^2.9.13",
+    "lodash": "^4.17.15"
+  }
+}

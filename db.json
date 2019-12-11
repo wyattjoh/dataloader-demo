@@ -1,0 +1,65 @@
+{
+  "users": [
+    { "id": "user_1", "username": "carrotCake" },
+    { "id": "user_2", "username": "applePie" },
+    { "id": "user_3", "username": "cottonCandy" }
+  ],
+  "stories": [
+    { "id": "story_1", "url": "https://www.theverge.com/2019/12/10/..." }
+  ],
+  "comments": [
+    {
+      "id": "comment_1",
+      "storyID": "story_1",
+      "authorID": "user_1",
+      "body": "Sugar plum wafer apple pie. Gummi bears gingerbread cake marshmallow lemon drops. Dessert muffin chocolate bar dragée soufflé cake.",
+      "createdAt": "2019-12-11T09:30:52.327Z"
+    },
+    {
+      "id": "comment_2",
+      "storyID": "story_1",
+      "authorID": "user_1",
+      "body": "Sweet gummies marshmallow tart. Tootsie roll gummies toffee muffin. ",
+      "createdAt": "2019-12-11T09:30:52.327Z"
+    },
+    {
+      "id": "comment_3",
+      "storyID": "story_1",
+      "authorID": "user_2",
+      "body": "Chocolate cake sugar plum jelly-o cake apple pie chocolate cake wafer chocolate cake topping. Tootsie roll toffee jelly beans. Apple pie chupa chups lemon drops gummies candy canes.",
+      "createdAt": "2019-12-11T09:30:52.327Z"
+    },
+    {
+      "id": "comment_4",
+      "storyID": "story_1",
+      "authorID": "user_1",
+      "parentID": "comment_3",
+      "body": "Caramels cake bonbon cheesecake. Chocolate bar sweet roll cake sesame snaps tootsie roll sesame snaps bonbon muffin. Biscuit ice cream macaroon liquorice cookie.",
+      "createdAt": "2019-12-11T09:30:52.327Z"
+    },
+    {
+      "id": "comment_5",
+      "storyID": "story_1",
+      "authorID": "user_2",
+      "parentID": "comment_3",
+      "body": "Halvah jelly lemon drops bear claw tootsie roll cookie gummies lollipop cotton candy. ",
+      "createdAt": "2019-12-11T09:30:52.327Z"
+    },
+    {
+      "id": "comment_6",
+      "storyID": "story_1",
+      "authorID": "user_1",
+      "parentID": "comment_3",
+      "body": "Macaroon tiramisu sweet roll wafer.",
+      "createdAt": "2019-12-11T09:30:52.327Z"
+    },
+    {
+      "id": "comment_7",
+      "storyID": "story_1",
+      "authorID": "user_3",
+      "parentID": "comment_3",
+      "body": "Biscuit chocolate apple pie. Cotton candy candy sweet pudding pastry tart gummi bears liquorice carrot cake. Jelly beans gummies sugar plum pudding oat cake jelly.",
+      "createdAt": "2019-12-11T09:30:52.327Z"
+    }
+  ]
+}

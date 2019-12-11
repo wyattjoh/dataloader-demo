@@ -16,7 +16,7 @@ module.exports = () => {
      * find many stories.
      */
     stories: query(urls => {
-      const stories = db.stories.filter(story => urls.include(story.url));
+      const stories = db.stories.filter(story => urls.includes(story.url));
       return urls.map(url => stories.find(story => story.url === url));
     }),
     /**
@@ -27,7 +27,7 @@ module.exports = () => {
      * find many users.
      */
     users: query(ids => {
-      const users = db.users.filter(user => ids.include(user.id));
+      const users = db.users.filter(user => ids.includes(user.id));
       return ids.map(id => users.find(user => user.id === id));
     }),
     /**

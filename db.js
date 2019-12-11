@@ -58,7 +58,7 @@ module.exports = () => {
     /**
      * find replies for many comments.
      */
-    storiesComments: query(parentIDs => {
+    commentsReplies: query(parentIDs => {
       const comments = db.comments.filter(
         comment => comment.parentID === parentID
       );

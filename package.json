@@ -9,7 +9,7 @@
     "start": "node index.js"
   },
   "dependencies": {
-    "apollo-server": "^2.9.13",
+    "apollo-server": "^2.14.2",
     "dataloader": "^2.0.0",
     "lodash": "^4.17.15"
   }
